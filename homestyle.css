@@ -16,6 +16,7 @@ html{
     padding: 0 80px;
     margin: auto;
 }
+
 .navbar{
     position: fixed;
     width: 100%;
@@ -37,7 +38,14 @@ html{
     justify-content: space-between;
 }
 
+.navbar .menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
 .navbar .menu li{
+    justify-content: center;
     list-style: none;
     display: inline-block;
 }
