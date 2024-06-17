@@ -667,7 +667,28 @@ footer .social i{
 
 
 /*---------------------------------------------------------------------------*/
+@media (max-width: 767px){
+    .navbar .menu {
+        display: flex;
+        justify-content: flex-end;
+    }
 
+    .navbar .menu li {
+        display: block;
+    }
+}
+
+@media (min-width: 768px){
+    .navbar .menu {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+}
 
 /* responsive media*/
 @media (max-width: 1304px){
@@ -704,11 +725,7 @@ footer .social i{
         
     }
 }
-/*@media (max-width: 500px){
-    .max-width{
-        padding: 0 10px;
-    }
-}*/
+
 
 
 @media (max-width: 970px){
