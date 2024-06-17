@@ -38,12 +38,6 @@ html{
     justify-content: space-between;
 }
 
-.navbar .menu {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-}
-
 .navbar .menu li{
     justify-content: center;
     list-style: none;
@@ -668,14 +662,24 @@ footer .social i{
 
 /*---------------------------------------------------------------------------*/
 @media (max-width: 767px){
-    .navbar .menu {
-        display: flex;
+    .navbar .max-width {
         justify-content: flex-end;
     }
 
-    .navbar .menu li {
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar .menu-btn {
         display: block;
     }
+}
+
+.navbar .menu-btn.active + .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 @media (min-width: 768px){
