@@ -4,13 +4,16 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
 #imgsrc{
     border : black;
 }
+
 /*Navbar styling*/
 html{
     scroll-behavior: smooth;
 }
+
 .max-width{
     max-width: 13000px;
     padding: 0 80px;
@@ -26,6 +29,7 @@ html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     transition: all 0.3s ease;
 }
+
 .navbar.sticky{
     padding: 30px 0;
     background: #322222;
@@ -76,7 +80,7 @@ html{
 }
 
 .navbar .menu li a:hover{
-    color: rgb(255, 255, 255);
+    color: rgb(232, 229, 229);
 }
 
 /*button styling*/
@@ -143,7 +147,14 @@ html{
     font-size: 30px;
     margin-top: 30px;
     padding-right: 30px;
+}
 
+.home .social a img{
+    border-radius: 5px;
+    width:25px;
+    height:25px;
+    padding: 3px;
+    background-color: white;
 }
 
 
@@ -393,19 +404,19 @@ section .title::before{
     background: rgb(46, 75, 129);
 }
 
-.skills .skills-content .right .c::before{
-    width: 40%;
-}
-
-.skills .skills-content .right .html::before{
+.skills .skills-content .right .python::before{
     width: 70%;
 }
 
-.skills .skills-content .right .python::before{
-    width: 80%;
+.skills .skills-content .right .r::before{
+    width: 40%;
 }
 
 .skills .skills-content .right .ml::before{
+    width: 50%;
+}
+
+.skills .skills-content .right .ds::before{
     width: 50%;
 }
 
@@ -454,24 +465,65 @@ section .title::before{
     transition: all 0.3s ease;
 }
 
-.port .carousel .card .box span{
+.port .carousel .card .box .buttons1 { /* New class for the buttons section */
+    display: flex; /* Arrange buttons side by side */
+    gap: 10px; /* Optional: adds space between buttons */
+    margin-top: 10px; /* Optional: adds space above the buttons */
+}
+
+.port .carousel .card .box .buttons1 span {
+    display: inline-block;
     border: rgb(158, 130, 130) 1px solid;
-    padding: 2%;
-    margin: 1.5%;
+    padding: 1% 5% 1% 5%;
+    margin: 1.5% 5% 1.5% 0%;
     border-radius: 10px;
 }
 
-.port .carousel .card .box span:hover{
+.port .carousel .card .box .buttons1 span:hover {
     border-color: #222;
     background-color: rgb(46, 75, 129);
 }
 
-.port .carousel .card .box span a{
+.port .carousel .card .box .buttons1 span a {
+    display: inline;
     font-size: large;
     color: white;
+    text-wrap: nowrap;
+    text-decoration: none;
 }
 
-.port .carousel .card .box span a:hover{
+.port .carousel .card .box .buttons1 span a:hover {
+    color: #222;
+}
+
+.port .carousel .card .box .buttons2 { /* New class for the buttons section */
+    display: flex; /* Arrange buttons side by side */
+    gap: 10px; /* Optional: adds space between buttons */
+    margin-top: 10px; /* Optional: adds space above the buttons */
+}
+
+.port .carousel .card .box .buttons2 span {
+    display: inline-block;
+    border: rgb(158, 130, 130) 1px solid;
+    padding: 6%;
+    margin: 1;
+    border-radius: 10px;
+}
+
+.port .carousel .card .box .buttons2 span:hover {
+    border-color: #222;
+    background-color: rgb(46, 75, 129);
+}
+
+.port .carousel .card .box .buttons2 span a {
+    display: inline;
+    font-size: large;
+    color: white;
+    text-wrap: nowrap;
+    text-decoration: none;
+}
+
+.port .carousel .card .box .buttons2 span a:hover {
     color: #222;
 }
 
@@ -635,19 +687,39 @@ section .title::before{
 footer{
     background: #111;
     padding: 20px 23px;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     justify-items: center;
     align-items: center;
 }
-footer a{
-    color: rgb(14, 97, 252);
-    font-size: 18px;
-    transition: all 0.3s ease;
-}
-footer a:hover{
-    text-decoration: underline;
 
+footer>span a {
+    color: #F08080;
+    font-size: 18px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: -5px; /* Adjust as needed */
+    left: 0;
+    background-color: #F08080;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+
+footer a:hover {
+    color: white; /* Optional, if you want to change color on hover */
 }
 
 footer .social i{
@@ -655,10 +727,15 @@ footer .social i{
     font-size: 30px;
     margin-top: 30px;
     padding-right: 30px;
-    
 }
 
-
+footer .social a img{
+    border-radius: 5px;
+    width:25px;
+    height:25px;
+    padding: 3px;
+    background-color: white;
+}
 
 /*---------------------------------------------------------------------------*/
 @media (max-width: 767px){
